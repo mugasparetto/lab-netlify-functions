@@ -6,6 +6,12 @@ export default async (req, context) => {
     process.env.SUPABASE_API
   );
 
+  const headers = {
+    'Access-Control-Allow-Origin': '*', //TODO: UPDATE THIS
+    'Access-Control-Allow-Headers': 'Content-Type',
+    'Access-Control-Allow-Methods': 'GET',
+  };
+
   try {
     const { data, error } = await supabase.from('profile').select(`
     id,
@@ -20,15 +26,12 @@ export default async (req, context) => {
 
     return new Response(JSON.stringify(data), {
       statusCode: 200,
-      headers: {
-        'Access-Control-Allow-Origin': '*',
-        'Access-Control-Allow-Headers': 'Content-Type',
-        'Access-Control-Allow-Methods': 'GET',
-      },
+      headers,
     });
   } catch (error) {
     return new Response(JSON.stringify(error), {
       statusCode: 500,
+      headers,
     });
   }
 };
