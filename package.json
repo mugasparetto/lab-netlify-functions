@@ -1,0 +1,8 @@
+{
+  "name": "lab-netlify-functions",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/mugasparetto/lab-netlify-functions.git",
+  "author": "mugasparetto <mu.gasparetto@hotmail.com>",
+  "license": "MIT"
+}
