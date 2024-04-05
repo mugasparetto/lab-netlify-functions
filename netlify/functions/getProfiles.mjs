@@ -13,24 +13,27 @@ export default async (req, context) => {
   };
 
   try {
-    const { data, error } = await supabase.from('profile').select(`
+    const { data } = await supabase
+      .from('profile')
+      .select(
+        `
     id,
     name,
     skills:profile_skills (
       details,
       skill:skills (id, name)
     )
-  `);
-
-    if (error) throw error;
+  `
+      )
+      .throwOnError();
 
     return new Response(JSON.stringify(data), {
-      statusCode: 200,
+      status: 200,
       headers,
     });
   } catch (error) {
     return new Response(JSON.stringify(error), {
-      statusCode: 500,
+      status: 400,
       headers,
     });
   }
