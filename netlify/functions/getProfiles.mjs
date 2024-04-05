@@ -13,7 +13,7 @@ export default async (req, context) => {
   };
 
   try {
-    const { data, error } = await supabase.from('profile').select(`
+    const { data, error } = await supabase.from('profiles').select(`
     id,
     name,
     skills:profile_skills (
