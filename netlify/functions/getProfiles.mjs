@@ -14,7 +14,7 @@ export default async (req, context) => {
 
   try {
     const { data } = await supabase
-      .from('profile')
+      .from('profiles')
       .select(
         `
     id,
