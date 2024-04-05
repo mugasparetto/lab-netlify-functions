@@ -1,11 +1,10 @@
 export default async (req, context) => {
-  return {
+  return new Response('Hello world', {
     statusCode: 200,
     headers: {
       'Access-Control-Allow-Origin': '*',
       'Access-Control-Allow-Headers': 'Content-Type',
       'Access-Control-Allow-Methods': 'GET',
     },
-    body: 'This was a preflight call!',
-  };
+  });
 };
