@@ -32,6 +32,8 @@ export default async (req, context) => {
       headers,
     });
   } catch (error) {
-    return new Error(error);
+    return new Response(error, {
+      status: 400,
+    });
   }
 };
