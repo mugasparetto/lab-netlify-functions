@@ -1,4 +1,11 @@
+import { createClient } from '@supabase/supabase-js';
+
 export default async (req, context) => {
+  const supabase = createClient(
+    'https://ulelpxqzwblrqicwqhwz.supabase.co',
+    process.env.SUPABASE_API
+  );
+
   return new Response(JSON.stringify(['Hello', 'World']), {
     statusCode: 200,
     headers: {
