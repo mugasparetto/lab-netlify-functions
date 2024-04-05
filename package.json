@@ -4,5 +4,9 @@
   "main": "index.js",
   "repository": "https://github.com/mugasparetto/lab-netlify-functions.git",
   "author": "mugasparetto <mu.gasparetto@hotmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.42.0",
+    "dotenv": "^16.4.5"
+  }
 }
