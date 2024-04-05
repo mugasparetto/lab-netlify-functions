@@ -32,9 +32,6 @@ export default async (req, context) => {
       headers,
     });
   } catch (error) {
-    return new Response(JSON.stringify(error), {
-      status: 400,
-      headers,
-    });
+    return new Error(error);
   }
 };
