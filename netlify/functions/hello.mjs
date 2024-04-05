@@ -1,5 +1,5 @@
 export default async (req, context) => {
-  return new Response('Hello world', {
+  return new Response(['Hello', 'World'], {
     statusCode: 200,
     headers: {
       'Access-Control-Allow-Origin': '*',
