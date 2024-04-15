@@ -3,3 +3,6 @@
   # functions, to deploy. This is an absolute path relative to the 
   # base directory, which is the root by default (/).
   directory = "netlify/functions/"
+
+[functions."scheduled"]
+schedule = "* * * * *"

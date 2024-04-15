@@ -6,7 +6,9 @@
   "author": "mugasparetto <mu.gasparetto@hotmail.com>",
   "license": "MIT",
   "dependencies": {
-    "@supabase/supabase-js": "^2.42.0",
+    "@supabase/supabase-js": "^2.42.0"
+  },
+  "devDependencies": {
     "dotenv": "^16.4.5"
   }
 }
